@@ -1,1 +1,202 @@
+<!DOCTYPE html>
 
+<html lang="fr">
+
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>KareBoxParis - Réservation</title>
+
+
+<link rel="stylesheet" href="css/global.css">
+
+<link rel="stylesheet" href="css/reservation.css">
+
+
+<!-- Calendrier FullCalendar -->
+
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css" rel="stylesheet">
+
+
+</head>
+
+
+
+<body>
+
+
+<header>
+
+<h1>KareBoxParis</h1>
+
+<p>
+Réservez votre espace de stockage privé
+</p>
+
+</header>
+
+
+
+
+<div class="container">
+
+
+
+<h2>
+Disponibilité aujourd'hui
+</h2>
+
+
+<div id="disponibilites"></div>
+
+
+
+
+<h2>
+Choisissez votre box
+</h2>
+
+
+
+<select id="choixBox">
+
+<option value="box1">
+Box 1 - 1m²
+</option>
+
+<option value="box2">
+Box 2 - 1m²
+</option>
+
+<option value="box3">
+Box 3 - 1m²
+</option>
+
+<option value="box4">
+Box 4 - 1m²
+</option>
+
+<option value="box5">
+Box 5 - 1m²
+</option>
+
+<option value="box6">
+Box 6 - 1m²
+</option>
+
+<option value="box7">
+Box 7 - 1m²
+</option>
+
+<option value="box8">
+Box 8 - 1m²
+</option>
+
+</select>
+
+
+
+
+
+<h2>
+Calendrier des disponibilités
+</h2>
+
+
+<div id="calendar"></div>
+
+
+
+
+
+<div class="resume">
+
+
+<h2>
+Votre location
+</h2>
+
+
+<p id="dateDebut">
+Sélectionnez une date de début
+</p>
+
+
+<p id="dateFin">
+Location minimum : 30 jours
+</p>
+
+
+
+<p id="prix">
+Prix : 60€/mois
+</p>
+
+
+
+<div id="resultatReservation"></div>
+
+
+
+</div>
+
+
+
+
+
+<div class="client">
+
+
+<h2>
+Vos informations
+</h2>
+
+
+<input placeholder="Nom">
+
+
+<input placeholder="Email">
+
+
+<input placeholder="Téléphone">
+
+
+<button>
+
+Continuer
+
+</button>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+
+
+<script src="js/calendar.js"></script>
+
+
+<script src="js/reservation.js"></script>
+
+
+</body>
+
+
+</html>

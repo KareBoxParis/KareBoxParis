@@ -2,214 +2,946 @@
 
 <html lang="fr">
 
-
 <head>
-  
-<meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<title>KareBoxParis - Réservation</title>
+    <meta
+        name="description"
+        content="Demandez la disponibilité d’un espace de stockage KareBoxParis dans le 20e arrondissement de Paris."
+    >
 
+    <title>KareBoxParis - Demande de disponibilité</title>
 
-<link rel="stylesheet" href="css/global.css">
+    <link
+        rel="stylesheet"
+        href="css/global.css"
+    >
 
-<link rel="stylesheet" href="css/reservation.css">
+    <link
+        rel="stylesheet"
+        href="css/reservation.css"
+    >
 
+    <!-- Calendrier FullCalendar -->
 
-<!-- Calendrier FullCalendar -->
-
-<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css" rel="stylesheet">
-
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css"
+    >
 
 </head>
-
 
 
 <body>
 
 
-<header>
+    <!-- En-tête -->
 
-<h1>KareBoxParis</h1>
+    <header class="reservation-header">
 
-<p>
-Réservez votre espace de stockage privé
-</p>
+        <nav class="reservation-navigation">
 
-</header>
+            <a
+                href="index.html"
+                class="reservation-logo"
+                aria-label="Retour à l'accueil KareBoxParis"
+            >
+                KareBoxParis
+            </a>
 
+            <a
+                href="index.html"
+                class="back-home-link"
+            >
+                Retour à l’accueil
+            </a>
 
+        </nav>
 
 
-<div class="container">
+        <div class="reservation-header-content">
 
+            <p class="reservation-eyebrow">
+                Stockage privé à Paris 20e
+            </p>
 
+            <h1>
+                Demandez la disponibilité de votre espace
+            </h1>
 
-<h2>
-Disponibilité aujourd'hui
-</h2>
+            <p class="reservation-introduction">
+                Sélectionnez le volume souhaité et vos dates.
+                Votre demande sera vérifiée avant toute réservation
+                définitive et avant tout paiement.
+            </p>
 
+        </div>
 
-<div id="disponibilites"></div>
+    </header>
 
 
 
+    <main class="reservation-main">
 
-<h2>
-Choisissez votre box
-</h2>
 
+        <!-- Étapes -->
 
+        <section
+            class="reservation-steps"
+            aria-label="Étapes de la demande"
+        >
 
-<select id="choixBox">
+            <div class="reservation-step">
 
-<option value="box1">
-Box 1 - 1m²
-</option>
+                <span class="step-number">
+                    1
+                </span>
 
-<option value="box2">
-Box 2 - 1m²
-</option>
+                <span class="step-text">
+                    Choisissez votre volume
+                </span>
 
-<option value="box3">
-Box 3 - 1m²
-</option>
+            </div>
 
-<option value="box4">
-Box 4 - 1m²
-</option>
 
-<option value="box5">
-Box 5 - 1m²
-</option>
+            <div class="reservation-step">
 
-<option value="box6">
-Box 6 - 1m²
-</option>
+                <span class="step-number">
+                    2
+                </span>
 
-<option value="box7">
-Box 7 - 1m²
-</option>
+                <span class="step-text">
+                    Sélectionnez vos dates
+                </span>
 
-<option value="box8">
-Box 8 - 1m²
-</option>
+            </div>
 
-</select>
 
+            <div class="reservation-step">
 
+                <span class="step-number">
+                    3
+                </span>
 
+                <span class="step-text">
+                    Envoyez votre demande
+                </span>
 
+            </div>
 
-<h2>
-Calendrier des disponibilités
-</h2>
+        </section>
 
 
-<div id="calendar"></div>
 
+        <div class="reservation-layout">
 
 
+            <!-- Colonne principale -->
 
+            <div class="reservation-content">
 
-<div class="resume">
 
+                <!-- Choix du volume -->
 
-<h2>
-Votre location
-</h2>
+                <section class="reservation-section">
 
+                    <div class="section-heading">
 
-<p id="dateDebut">
-Sélectionnez une date de début
-</p>
+                        <p class="section-number">
+                            Étape 1
+                        </p>
 
+                        <h2>
+                            Choisissez votre volume
+                        </h2>
 
-<p id="dateFin">
-Location minimum : 30 jours
-</p>
+                        <p>
+                            Sélectionnez l’espace correspondant à vos besoins.
+                            La durée minimale de location est d’un mois.
+                        </p>
 
+                    </div>
 
 
-<p id="prix">
-Prix : 60€/mois
-</p>
+                    <div
+                        class="volume-grid"
+                        id="volumeGrid"
+                    >
 
 
+                        <!-- Volume 2 m³ -->
 
-<div id="resultatReservation"></div>
+                        <label class="volume-card">
 
+                            <input
+                                type="radio"
+                                name="volume"
+                                value="2"
+                                data-price="50"
+                                data-label="2 m³"
+                            >
 
+                            <span class="volume-card-content">
 
-</div>
+                                <span class="volume-card-top">
 
+                                    <span class="volume-name">
+                                        2 m³
+                                    </span>
 
+                                    <span class="volume-price">
+                                        50 €
+                                        <small>
+                                            / mois
+                                        </small>
+                                    </span>
 
+                                </span>
 
 
-<div class="client">
+                                <span class="volume-description">
+                                    Idéal pour des cartons, valises,
+                                    archives ou petits objets.
+                                </span>
 
 
-<h2>
-Vos informations
-</h2>
+                                <span class="volume-selection">
+                                    Choisir ce volume
+                                </span>
 
+                            </span>
 
-<input placeholder="Nom">
+                        </label>
 
 
-<input placeholder="Email">
 
+                        <!-- Volume 4 m³ -->
 
-<input placeholder="Téléphone">
+                        <label class="volume-card volume-card-featured">
 
+                            <input
+                                type="radio"
+                                name="volume"
+                                value="4"
+                                data-price="80"
+                                data-label="4 m³"
+                            >
 
-<button>
+                            <span class="volume-card-content">
 
-Continuer
+                                <span class="volume-badge">
+                                    Le plus populaire
+                                </span>
 
-</button>
+                                <span class="volume-card-top">
 
+                                    <span class="volume-name">
+                                        4 m³
+                                    </span>
 
-</div>
+                                    <span class="volume-price">
+                                        80 €
+                                        <small>
+                                            / mois
+                                        </small>
+                                    </span>
 
+                                </span>
 
 
+                                <span class="volume-description">
+                                    Convient pour plusieurs cartons,
+                                    du petit mobilier ou du matériel.
+                                </span>
 
 
-</div>
+                                <span class="volume-selection">
+                                    Choisir ce volume
+                                </span>
 
+                            </span>
 
+                        </label>
 
 
 
+                        <!-- Volume 6 m³ -->
 
+                        <label class="volume-card">
 
-<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+                            <input
+                                type="radio"
+                                name="volume"
+                                value="6"
+                                data-price="110"
+                                data-label="6 m³"
+                            >
 
+                            <span class="volume-card-content">
 
-<script src="js/calendar.js"></script>
+                                <span class="volume-card-top">
 
+                                    <span class="volume-name">
+                                        6 m³
+                                    </span>
 
-<script src="js/reservation.js"></script>
+                                    <span class="volume-price">
+                                        110 €
+                                        <small>
+                                            / mois
+                                        </small>
+                                    </span>
 
-  <div id="paypal-section">
+                                </span>
 
-<h2>
-Paiement sécurisé
-</h2>
 
+                                <span class="volume-description">
+                                    Adapté au mobilier démonté,
+                                    aux équipements ou au stock professionnel.
+                                </span>
 
-<div id="paypal-button">
 
-</div>
+                                <span class="volume-selection">
+                                    Choisir ce volume
+                                </span>
 
-</div>
+                            </span>
+
+                        </label>
+
+
+
+                        <!-- Volume 12 m³ -->
+
+                        <label class="volume-card">
+
+                            <input
+                                type="radio"
+                                name="volume"
+                                value="12"
+                                data-price="180"
+                                data-label="12 m³"
+                            >
+
+                            <span class="volume-card-content">
+
+                                <span class="volume-card-top">
+
+                                    <span class="volume-name">
+                                        12 m³
+                                    </span>
+
+                                    <span class="volume-price">
+                                        180 €
+                                        <small>
+                                            / mois
+                                        </small>
+                                    </span>
+
+                                </span>
+
+
+                                <span class="volume-description">
+                                    Pour un stockage important,
+                                    un déménagement ou des besoins professionnels.
+                                </span>
+
+
+                                <span class="volume-selection">
+                                    Choisir ce volume
+                                </span>
+
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <p
+                        class="form-error-message"
+                        id="volumeError"
+                        aria-live="polite"
+                    ></p>
+
+                </section>
+
+
+
+                <!-- Sélection des dates -->
+
+                <section class="reservation-section">
+
+                    <div class="section-heading">
+
+                        <p class="section-number">
+                            Étape 2
+                        </p>
+
+                        <h2>
+                            Sélectionnez vos dates
+                        </h2>
+
+                        <p>
+                            Cliquez une première fois sur votre date de début,
+                            puis une deuxième fois sur votre date de fin.
+                        </p>
+
+                    </div>
+
+
+                    <div class="minimum-duration-notice">
+
+                        <span class="notice-icon">
+                            i
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Location minimale : un mois
+                            </strong>
+
+                            <p>
+                                La date de fin doit être au minimum la même date
+                                du mois suivant.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="calendar"
+                        class="reservation-calendar"
+                    ></div>
+
+
+                    <div class="selected-dates">
+
+                        <div class="selected-date-card">
+
+                            <span class="selected-date-label">
+                                Date de début
+                            </span>
+
+                            <strong id="dateDebut">
+                                Non sélectionnée
+                            </strong>
+
+                        </div>
+
+
+                        <div class="selected-date-arrow">
+                            →
+                        </div>
+
+
+                        <div class="selected-date-card">
+
+                            <span class="selected-date-label">
+                                Date de fin
+                            </span>
+
+                            <strong id="dateFin">
+                                Non sélectionnée
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        class="form-error-message"
+                        id="dateError"
+                        aria-live="polite"
+                    ></p>
+
+                </section>
+
+
+
+                <!-- Formulaire client -->
+
+                <section class="reservation-section">
+
+                    <div class="section-heading">
+
+                        <p class="section-number">
+                            Étape 3
+                        </p>
+
+                        <h2>
+                            Vos informations
+                        </h2>
+
+                        <p>
+                            Ces informations nous permettront de vérifier
+                            la disponibilité et de vous recontacter.
+                        </p>
+
+                    </div>
+
+
+                    <form
+                        id="reservationForm"
+                        class="reservation-form"
+                        novalidate
+                    >
+
+
+                        <div class="form-grid">
+
+
+                            <div class="form-group">
+
+                                <label for="clientName">
+                                    Nom et prénom
+                                    <span aria-hidden="true">
+                                        *
+                                    </span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="clientName"
+                                    name="clientName"
+                                    autocomplete="name"
+                                    placeholder="Votre nom et prénom"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="clientEmail">
+                                    Adresse e-mail
+                                    <span aria-hidden="true">
+                                        *
+                                    </span>
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="clientEmail"
+                                    name="clientEmail"
+                                    autocomplete="email"
+                                    placeholder="exemple@email.com"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="clientPhone">
+                                    Téléphone
+                                    <span aria-hidden="true">
+                                        *
+                                    </span>
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="clientPhone"
+                                    name="clientPhone"
+                                    autocomplete="tel"
+                                    placeholder="06 00 00 00 00"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="clientType">
+                                    Vous êtes
+                                </label>
+
+                                <select
+                                    id="clientType"
+                                    name="clientType"
+                                >
+
+                                    <option value="particulier">
+                                        Un particulier
+                                    </option>
+
+                                    <option value="professionnel">
+                                        Un professionnel
+                                    </option>
+
+                                    <option value="association">
+                                        Une association
+                                    </option>
+
+                                    <option value="autre">
+                                        Autre
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="storageUse">
+                                Que souhaitez-vous stocker ?
+                                <span aria-hidden="true">
+                                    *
+                                </span>
+                            </label>
+
+                            <textarea
+                                id="storageUse"
+                                name="storageUse"
+                                rows="4"
+                                placeholder="Exemple : cartons, valises, mobilier démonté, archives..."
+                                required
+                            ></textarea>
+
+                            <small>
+                                Indiquez la nature générale des objets.
+                                Ne mentionnez aucune information confidentielle.
+                            </small>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="clientMessage">
+                                Message complémentaire
+                            </label>
+
+                            <textarea
+                                id="clientMessage"
+                                name="clientMessage"
+                                rows="4"
+                                placeholder="Précisez vos besoins particuliers ou vos contraintes d’accès."
+                            ></textarea>
+
+                        </div>
+
+
+
+                        <!-- Valeurs renseignées automatiquement par JavaScript -->
+
+                        <input
+                            type="hidden"
+                            id="selectedVolume"
+                            name="selectedVolume"
+                            value=""
+                        >
+
+                        <input
+                            type="hidden"
+                            id="selectedPrice"
+                            name="selectedPrice"
+                            value=""
+                        >
+
+                        <input
+                            type="hidden"
+                            id="selectedStartDate"
+                            name="selectedStartDate"
+                            value=""
+                        >
+
+                        <input
+                            type="hidden"
+                            id="selectedEndDate"
+                            name="selectedEndDate"
+                            value=""
+                        >
+
+                        <input
+                            type="hidden"
+                            id="estimatedTotal"
+                            name="estimatedTotal"
+                            value=""
+                        >
+
+
+
+                        <div class="form-checkbox-group">
+
+
+                            <label class="form-checkbox">
+
+                                <input
+                                    type="checkbox"
+                                    id="prohibitedItemsAgreement"
+                                    name="prohibitedItemsAgreement"
+                                    required
+                                >
+
+                                <span>
+                                    Je confirme ne pas vouloir stocker de produits
+                                    dangereux, inflammables, périssables,
+                                    interdits ou illicites.
+                                </span>
+
+                            </label>
+
+
+                            <label class="form-checkbox">
+
+                                <input
+                                    type="checkbox"
+                                    id="contactAgreement"
+                                    name="contactAgreement"
+                                    required
+                                >
+
+                                <span>
+                                    J’accepte d’être contacté afin de confirmer
+                                    la disponibilité et les modalités de location.
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <p
+                            class="form-error-message"
+                            id="formError"
+                            aria-live="polite"
+                        ></p>
+
+
+                        <button
+                            type="submit"
+                            class="reservation-submit-button"
+                            id="reservationSubmit"
+                        >
+                            Demander la disponibilité
+                        </button>
+
+
+                        <p class="form-legal-note">
+                            Cette demande ne constitue pas une réservation
+                            définitive. Aucun paiement ne sera demandé avant
+                            confirmation de la disponibilité.
+                        </p>
+
+                    </form>
+
+                </section>
+
+            </div>
+
+
+
+            <!-- Récapitulatif -->
+
+            <aside class="reservation-summary">
+
+                <div class="summary-card">
+
+                    <p class="summary-eyebrow">
+                        Votre demande
+                    </p>
+
+                    <h2>
+                        Récapitulatif
+                    </h2>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Volume
+                        </span>
+
+                        <strong id="summaryVolume">
+                            À sélectionner
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Tarif mensuel
+                        </span>
+
+                        <strong id="summaryMonthlyPrice">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Début souhaité
+                        </span>
+
+                        <strong id="summaryStartDate">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Fin souhaitée
+                        </span>
+
+                        <strong id="summaryEndDate">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Durée estimée
+                        </span>
+
+                        <strong id="summaryDuration">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-divider"></div>
+
+
+                    <div class="summary-total">
+
+                        <span>
+                            Montant estimé
+                        </span>
+
+                        <strong id="summaryTotal">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <p class="summary-information">
+                        Le montant définitif sera confirmé après vérification
+                        de la disponibilité et des dates demandées.
+                    </p>
+
+                </div>
+
+
+                <div class="validation-card">
+
+                    <h3>
+                        Comment cela fonctionne ?
+                    </h3>
+
+                    <ol>
+
+                        <li>
+                            Vous envoyez votre demande.
+                        </li>
+
+                        <li>
+                            Nous vérifions la disponibilité.
+                        </li>
+
+                        <li>
+                            Vous recevez une confirmation et le contrat.
+                        </li>
+
+                        <li>
+                            Le paiement est effectué après validation.
+                        </li>
+
+                    </ol>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+
+
+        <!-- Message de confirmation -->
+
+        <section
+            class="reservation-confirmation"
+            id="reservationConfirmation"
+            aria-live="polite"
+            hidden
+        >
+
+            <div class="confirmation-icon">
+                ✓
+            </div>
+
+            <h2>
+                Votre demande a bien été préparée
+            </h2>
+
+            <p id="confirmationMessage">
+                Nous vous recontacterons après vérification de la disponibilité.
+            </p>
+
+        </section>
+
+    </main>
+
+
+
+    <footer class="reservation-footer">
+
+        <p>
+            KareBoxParis — Espace de stockage privé à Paris 20e
+        </p>
+
+        <p>
+            Location sur demande et accès sur rendez-vous.
+        </p>
+
+    </footer>
+
+
+
+    <!-- FullCalendar -->
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+
+
+    <!-- Scripts du site -->
+
+    <script src="js/calendar.js"></script>
+
+    <script src="js/reservation.js"></script>
 
 
 </body>
-
 
 </html>

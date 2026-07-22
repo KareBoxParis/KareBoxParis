@@ -1,16 +1,17 @@
-
 .hero {
 
-height:90vh;
+
+height:95vh;
+
 
 background:
 
 linear-gradient(
 rgba(0,0,0,0.45),
-rgba(0,0,0,0.45)
+rgba(0,0,0,0.55)
 ),
 
-url("../images/hero.jpg");
+url("../images/quartier-paris20.jpg");
 
 background-size:cover;
 
@@ -18,11 +19,14 @@ background-position:center;
 
 color:white;
 
+
 }
 
 
 
+
 nav {
+
 
 display:flex;
 
@@ -32,25 +36,34 @@ align-items:center;
 
 padding:35px 60px;
 
+
 }
+
 
 
 
 .logo {
 
-font-size:28px;
+
+font-size:30px;
 
 letter-spacing:2px;
+
+font-weight:500;
+
 
 }
 
 
 
+
 .menu {
+
 
 display:flex;
 
 gap:35px;
+
 
 }
 
@@ -58,11 +71,13 @@ gap:35px;
 
 .hero-content {
 
-max-width:700px;
-
-margin:150px auto;
 
 text-align:center;
+
+max-width:800px;
+
+margin:160px auto;
+
 
 }
 
@@ -70,9 +85,11 @@ text-align:center;
 
 .hero-content h1 {
 
-font-size:48px;
 
-line-height:1.2;
+font-size:55px;
+
+line-height:1.15;
+
 
 }
 
@@ -80,27 +97,46 @@ line-height:1.2;
 
 .hero-content p {
 
+
 font-size:22px;
 
+
 }
+
 
 
 
 .price {
 
-font-size:28px!important;
+
+font-size:30px!important;
 
 margin:30px;
 
+
 }
 
+
+
+
+.location {
+
+
+font-size:16px!important;
+
+margin-top:35px;
+
+
+}
 
 
 
 
 .intro {
 
+
 text-align:center;
+
 
 }
 
@@ -108,98 +144,96 @@ text-align:center;
 
 .intro h2 {
 
-font-size:40px;
+
+font-size:42px;
+
 
 }
 
 
 
 
-.box-content {
+
+.feature {
+
 
 display:flex;
 
 align-items:center;
 
-gap:60px;
+gap:80px;
+
 
 }
 
 
 
-.box-content img {
+.feature.reverse {
 
-width:45%;
 
-border-radius:20px;
+flex-direction:row-reverse;
+
 
 }
 
 
 
+.feature-image {
 
-
-.gallery {
-
-text-align:center;
-
-}
-
-
-
-.photos {
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:20px;
-
-}
-
-
-
-.photos img {
-
-width:100%;
-
-height:300px;
-
-object-fit:cover;
-
-border-radius:20px;
-
-}
-
-
-
-
-.cards {
-
-display:flex;
-
-gap:30px;
-
-}
-
-
-
-.card {
-
-background:white;
-
-padding:35px;
-
-border-radius:20px;
 
 flex:1;
 
+
+}
+
+
+
+.feature-image img {
+
+
+border-radius:25px;
+
+box-shadow:0 20px 40px rgba(0,0,0,0.12);
+
+
+}
+
+
+
+.feature-text {
+
+
+flex:1;
+
+
+}
+
+
+
+.feature-text h2 {
+
+
+font-size:38px;
+
+
+}
+
+
+
+.feature-text li {
+
+
+margin:10px 0;
+
+
 }
 
 
 
 
-.tarif {
+
+.reservation-banner {
+
 
 text-align:center;
 
@@ -207,17 +241,21 @@ background:white;
 
 border-radius:30px;
 
+margin-bottom:80px;
+
+
 }
 
 
 
-.big-price {
+.reservation-banner h2 {
 
-font-size:45px;
 
-font-weight:bold;
+font-size:40px;
+
 
 }
+
 
 
 
@@ -225,33 +263,64 @@ font-weight:bold;
 @media(max-width:800px){
 
 
-.hero-content h1 {
-
-font-size:32px;
-
-}
-
-
 nav {
+
 
 flex-direction:column;
 
 gap:20px;
 
+
 }
 
 
-.box-content,
-.cards {
+
+.menu {
+
+
+gap:15px;
+
+
+}
+
+
+
+.hero-content {
+
+
+margin:100px auto;
+
+
+}
+
+
+
+.hero-content h1 {
+
+
+font-size:35px;
+
+
+}
+
+
+
+.feature,
+.feature.reverse {
+
 
 flex-direction:column;
 
+
 }
 
 
-.photos {
 
-grid-template-columns:1fr;
+section {
+
+
+padding:60px 25px;
+
 
 }
 

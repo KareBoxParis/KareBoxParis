@@ -1214,3 +1214,50 @@ a {
         flex-direction: column;
     }
 }
+
+/* =========================================================
+   ÉTATS SPÉCIAUX DU CALENDRIER
+   ========================================================= */
+
+.fc .calendar-past-date {
+    background: #f5f3ef;
+    cursor: not-allowed;
+}
+
+.fc .calendar-past-date .fc-daygrid-day-number {
+    color: #bbb6ae;
+}
+
+.fc .calendar-minimum-duration {
+    background:
+        repeating-linear-gradient(
+            -45deg,
+            rgba(167, 131, 69, 0.04),
+            rgba(167, 131, 69, 0.04) 5px,
+            rgba(167, 131, 69, 0.09) 5px,
+            rgba(167, 131, 69, 0.09) 10px
+        );
+}
+
+.fc .calendar-minimum-duration:hover {
+    background:
+        repeating-linear-gradient(
+            -45deg,
+            rgba(167, 131, 69, 0.08),
+            rgba(167, 131, 69, 0.08) 5px,
+            rgba(167, 131, 69, 0.14) 5px,
+            rgba(167, 131, 69, 0.14) 10px
+        );
+}
+
+.fc .fc-bg-event {
+    opacity: 1;
+}
+
+.fc .fc-daygrid-day {
+    cursor: pointer;
+}
+
+.fc .fc-daygrid-day.calendar-past-date {
+    cursor: not-allowed;
+}

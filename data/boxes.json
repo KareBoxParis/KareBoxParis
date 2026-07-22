@@ -1,1 +1,63 @@
 
+{
+  "entreprise": "KareBoxParis",
+  "ville": "Paris 20e",
+  "boxes": [
+    {
+      "id": "box1",
+      "nom": "Box 1",
+      "surface": "1m²",
+      "prixMensuel": 60,
+      "disponible": true
+    },
+    {
+      "id": "box2",
+      "nom": "Box 2",
+      "surface": "1m²",
+      "prixMensuel": 60,
+      "disponible": true
+    },
+    {
+      "id": "box3",
+      "nom": "Box 3",
+      "surface": "1m²",
+      "prixMensuel": 60,
+      "disponible": true
+    },
+    {
+      "id": "box4",
+      "nom": "Box 4",
+      "surface": "1m²",
+      "prixMensuel": 60,
+      "disponible": true
+    },
+    {
+      "id": "box5",
+      "nom": "Box 5",
+      "surface": "1m²",
+      "prixMensuel": 60,
+      "disponible": true
+    },
+    {
+      "id": "box6",
+      "nom": "Box 6",
+      "surface": "1m²",
+      "prixMensuel": 60,
+      "disponible": true
+    },
+    {
+      "id": "box7",
+      "nom": "Box 7",
+      "surface": "1m²",
+      "prixMensuel": 60,
+      "disponible": true
+    },
+    {
+      "id": "box8",
+      "nom": "Box 8",
+      "surface": "1m²",
+      "prixMensuel": 60,
+      "disponible": true
+    }
+  ]
+}

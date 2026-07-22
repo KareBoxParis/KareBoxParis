@@ -1,1 +1,7 @@
-
+{
+ "nom":"KareBoxParis",
+ "prixMensuel":60,
+ "dureeMinimum":30,
+ "ville":"Paris 20e",
+ "nombreBoxes":8
+}

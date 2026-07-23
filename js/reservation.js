@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
      * Exemple :
      * contact@kareboxparis.fr
      */
-    const CONTACT_EMAIL = "VOTRE-EMAIL@EXEMPLE.FR";
+    const CONTACT_EMAIL = "KareBox@outlook.fr";
 
 
     /* =========================================================
